@@ -9,7 +9,7 @@ const userNumber = parseInt(prompt("Inserire un numero da 1 a 5:"))
 
 console.log(oddEven, userNumber)
 
-//function numberPc (){
-//    Math.floor(Math.random() * 5);
-//}
+function numberPc(random) {
+    Math.floor(Math.random() * 5);
+}
 

@@ -3,23 +3,19 @@
 const wordAsked = prompt("Inserire una parola:", "osso")
 
 function wordHtml(parola){
-    let Paliparola = Array.from(parola)
+    let Paliparola = ""
 
-    console.log(Paliparola)
-    
-    if (Paliparola.length === Paliparola.length){
-        document.writeln(`La parola ${wordAsked} è palindroma.`)
-    } else {
-        document.writeln(`La parola ${wordAsked} non è palindroma.`)
+    for (let i = parola.length -1; i>= 0; i-- ){
+        Paliparola += parola[i]
     }
+
+    return Paliparola
 }
 
-wordHtml(wordAsked)
+if (wordAsked === wordHtml(wordAsked)){
+    console.log("parola palindroma")
+} else {
+    console.log("parola non palindroma")
+}
 
-//if (wordAsked.length === wordAsked.length){
-//    document.writeln(`La parola ${wordAsked} è palindroma.`)
-//} else {
-//    document.writeln(`La parola ${wordAsked} non è palindroma.`)
-//}
-
-
+console.log(wordHtml(wordAsked))
